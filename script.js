@@ -35,6 +35,12 @@ function createGrid(size) {
 
 function changeBoxColor(e) {
     clearInterval(setTimeId);
+    let currentOpacity = parseFloat(e.target.style.opacity) || 0;
+    if (currentOpacity < 1) {
+        currentOpacity += 1;
+    }
+    e.target.style.opacity = currentOpacity
+
     setTimeId = setInterval(() => {
         const r = Math.floor(Math.random()* 256);
         const g = Math.floor(Math.random() * 256);
@@ -62,6 +68,7 @@ function resetGrid() {
     boxes.forEach(box => {
         box.style.backgroundColor = 'grey';
         box.style.boxShadow = 'none';
+        box.style.opacity = '3';
     })
 }
 
