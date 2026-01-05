@@ -72,5 +72,3 @@ function totalReset(newGrid) {
 }
 
 generateHeaderColor();
-
-
