@@ -1,0 +1,73 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --size: 1;
+    --r: 1;
+    --g: 1;
+    --b: 1;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rosybrown;
+}
+
+.control {
+    height: 100vh;
+    width: 25%;
+}
+
+.header {
+    text-align: center;
+    font-weight: 900;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 30px;
+    color: ;
+    
+}
+
+.container {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    height: 90vh;
+    width: 90vh;
+    border: 3px solid black;
+}
+
+.row-container {
+    align-self: center;
+    display: flex;
+    width: 100%;
+    height: auto;
+    /* height: calc((90vh - (var(--size) * px)) / var(--size));  */
+}
+
+.box {
+    background-color: grey;
+    border: 1px solid gold;
+    margin: 0px;
+    flex-grow: 1;
+    height: 100%;
+    aspect-ratio: 1;
+    flex-shrink: 1;
+    /* --gap-count: calc(var(--size) - 1);
+    --total-gap-width: calc(var(--gap-count) * 2px);
+    width: calc((100% - var(--total-gap-width)) / var(--size));
+    max-height: calc((100vh - var(--gap-total) - 20px) / var(--size)); */
+}
+
+.box:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: -10px -3px gold ;
+}
